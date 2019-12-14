@@ -11,14 +11,13 @@ http_archive(
     url = "https://github.com/higherkindness/rules_scala/archive/{}.zip".format(rules_scala_annex_version),
 )
 
-# 'wip' branch
-rules_jvm_external_tag = "22f205078242e780d352ccd15156b9b4c918e813"
+rules_jvm_external_tag = "140a3a24d38913b17051c738218ddc659ce93026"
 
 http_archive(
     name = "rules_jvm_external",
-    sha256 = "1dedb236cc40141c7ab43298a53f9233600005e65733224207c7fcf91e67fe7e",
+    sha256 = "5893c5b1c0c64a47261cd02d2ace6be27abbced5cbb41e4eb750bef9d400b7ae",
     strip_prefix = "rules_jvm_external-{}".format(rules_jvm_external_tag),
-    url = "https://github.com/joprice/rules_jvm_external/archive/{}.zip".format(rules_jvm_external_tag),
+    url = "https://github.com/bazelbuild/rules_jvm_external/archive/{}.zip".format(rules_jvm_external_tag),
 )
 
 # use this to test changes locally
@@ -134,6 +133,8 @@ maven_install(
         "org.scala-sbt:compiler-interface:1.2.1",
         "org.scala-sbt:util-interface:1.2.0",
         "org.wartremover:wartremover_2.11.12:2.4.3",
+        "com.typesafe.play:play_2.11:2.5.19",
+        "org.scalatestplus.play:scalatestplus-play_2.11:2.0.1",
     ],
     repositories = [
       "https://repo1.maven.org/maven2",

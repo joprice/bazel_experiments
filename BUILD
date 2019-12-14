@@ -20,18 +20,10 @@ load(
     "scala_repl",
     "scala_test",
 )
-load("@io_bazel_rules_docker//scala:image.bzl", "scala_image")
 load("@io_bazel_rules_docker//container:container.bzl", "container_push")
 
 scala_binary(
     name = "service",
     main_class = "com.joprice.Main",
     srcs = ["Main.scala"]
-)
-
-scala_image(
-    name = "image",
-    main_class = "com.joprice.Main",
-    runtime_deps = ["service"],
-    deps = ["service"],
 )
