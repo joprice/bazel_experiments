@@ -22,3 +22,5 @@ project/plugins/project/
 bazel-*
 explain.txt
 profile.json.gz
+
+node_modules
